@@ -20,8 +20,8 @@ namespace WebApi.Controllers
         {
             List<string> data = new List<string>
             {
-                "Data line 1",
-                "data line 2",
+                "Data line 1 ",
+                "data line 2 ",
                 "Hello from a private endpoint. You need to be authenticated."
 
             };
