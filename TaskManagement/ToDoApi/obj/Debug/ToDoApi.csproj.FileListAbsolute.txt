@@ -80,3 +80,14 @@ C:\Murad All\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\ToDoApi.csprojResol
 C:\Murad All\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\ToDoApi.csproj.CoreCompileInputs.cache
 C:\Murad All\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\WebApi.dll
 C:\Murad All\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\WebApi.pdb
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\WebApi.dll.config
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\WebApi.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\WebApi.pdb
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\ToDoApi.csproj.CoreCompileInputs.cache
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\WebApi.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\WebApi.pdb
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.SqlServer.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.xml
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.SqlServer.xml
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Debug\ToDoApi.csprojResolveAssemblyReference.cache

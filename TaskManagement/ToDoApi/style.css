@@ -1,0 +1,11 @@
+﻿a {
+    cursor:pointer;
+}
+.topheader {
+    margin: 20px auto;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
