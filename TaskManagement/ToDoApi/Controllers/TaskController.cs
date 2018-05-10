@@ -49,6 +49,7 @@ namespace WebApi.Controllers
                     users.Where(u => taskToCreate.AssignedUsersId.Contains(u.userId)).ToList()
                     : null;
                 newTask = dbTask.DataRepo.CreateNewTask(newTask, assignedUsers);
+
                 dbTask.SaveChanges();
 
                 return Ok(newTask.ToTaskDTO());
