@@ -11,5 +11,6 @@ namespace WebApi.Repository.Interfaces
         List<DboUsers> GetAllUsers();
         List<DboTasks> GetAllTasks();
         DboUsers CreateNewUser(DboUsers user);
+        DboTasks CreateNewTask(DboTasks newTask, List<DboUsers> assignedUsers);
     }
 }

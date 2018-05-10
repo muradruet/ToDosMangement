@@ -17,6 +17,19 @@ namespace WebApi.Repository
             this.Context = context;
         }
 
+        public DboTasks CreateNewTask(DboTasks newTask, List<DboUsers> assignedUsers)
+        {
+            foreach (var user in assignedUsers)
+            {
+                Context.users.Attach(user);
+            }
+            newTask.users = assignedUsers;
+
+            return  Context.tasks.Add(newTask);
+         
+            //Context.SaveChanges();
+        }
+
         public DboUsers CreateNewUser(DboUsers user)
         {
             var newUser = Context.users.Add(user);

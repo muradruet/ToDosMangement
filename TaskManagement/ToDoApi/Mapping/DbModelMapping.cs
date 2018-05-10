@@ -72,6 +72,20 @@ namespace WebApi.Mapping
             return dboUser;
         }
 
+        public static DboTasks ToDboTask(this TaskDTO taskDTO)
+        {
+            DboTasks task = new DboTasks();
+            if (taskDTO != null)
+            {
+                task.name = taskDTO.Name;
+                task.description = taskDTO.Description;
+                task.statusId = (int)taskDTO.Status;
+                task.duedate = taskDTO.DueDate;
+                //task.AssignedUsersId = task.users != null ? task.users.Select(x => x.userId).ToList() : null;
+            }
+
+            return task;
+        }
         
     }
 }

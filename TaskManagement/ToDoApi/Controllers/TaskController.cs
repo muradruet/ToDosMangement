@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using WebApi.ContractDTOs;
 using WebApi.DBModel;
@@ -24,7 +25,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("tasks")]
-        //[Authorize]
+        [Authorize]
         public IHttpActionResult GetTasks()
         {
             using (IUnitOfWork dbTask = new UnitOfWork())
@@ -35,9 +36,28 @@ namespace WebApi.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("tasks")]
+        //[Authorize]
+        public IHttpActionResult CreatTask(TaskDTO taskToCreate)
+        {
+            using (IUnitOfWork dbTask = new UnitOfWork())
+            {
+                DboTasks newTask = taskToCreate.ToDboTask();
+                List<DboUsers> users = dbTask.DataRepo.GetAllUsers();
+                List<DboUsers> assignedUsers = taskToCreate.AssignedUsersId!= null ?
+                    users.Where(u => taskToCreate.AssignedUsersId.Contains(u.userId)).ToList()
+                    : null;
+                newTask = dbTask.DataRepo.CreateNewTask(newTask, assignedUsers);
+                dbTask.SaveChanges();
+
+                return Ok(newTask.ToTaskDTO());
+            }
+        }
+
         [HttpGet]
         [Route("users")]
-        //[Authorize]
+        [Authorize]
         public IHttpActionResult GetUsers()
         {
             using (IUnitOfWork dbTask = new UnitOfWork())
