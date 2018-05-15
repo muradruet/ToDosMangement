@@ -19,3 +19,7 @@
 .form-control.Textwarning {
     border: red 1px solid;
 }
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 10px) !important;
+}

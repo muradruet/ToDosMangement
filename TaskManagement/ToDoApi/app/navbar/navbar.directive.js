@@ -13,9 +13,6 @@
         var vm = this;
         vm.auth = authService;
 
-        vm.AddUser = function () {
-            
-            $state.go('user');
-        }
+       
     }
 })();

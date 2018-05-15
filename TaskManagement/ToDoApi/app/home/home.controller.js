@@ -93,6 +93,11 @@
         vm.addNewaTask = function () {
             $state.go("edittask", { myParam: { task: null, Status: vm.allStatus } })
         }
+
+        vm.AddUser = function () {
+
+            $state.go('user');
+        }
   }
 
 })();
