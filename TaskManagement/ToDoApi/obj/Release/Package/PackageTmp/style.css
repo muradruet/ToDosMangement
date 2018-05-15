@@ -1,0 +1,21 @@
+﻿a {
+    cursor:pointer;
+}
+.topheader {
+    margin: 20px auto;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.bigsize {
+    font-size:20px;
+}
+.Textwarning {
+    border: red 1px solid;
+}
+
+.form-control.Textwarning {
+    border: red 1px solid;
+}

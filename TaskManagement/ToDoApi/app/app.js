@@ -3,7 +3,11 @@
     'use strict';
 
     angular
-        .module('app', ['auth0.auth0', 'angular-jwt', 'ui.router'])
+        .module('app', ['auth0.auth0',
+            'angular-jwt',
+            'ui.router',
+            'angularjs-datetime-picker',
+            'multipleSelect'])
         .config(config);
 
     config.$inject = ['$stateProvider',
@@ -34,13 +38,26 @@
                 templateUrl: 'app/callback/callback.html',
                 controllerAs: 'vm'
             })
+            .state('user', {
+                url: '/user',
+                controller: 'UserController',
+                templateUrl: 'app/user/user.html',
+                controllerAs: 'vm'
+            })
+            .state('edittask', {
+                url: '/edittask',
+                controller: 'EditTaskController',
+                templateUrl: 'app/editTask/editTask.html',
+                params: { myParam: null },
+                controllerAs: 'vm'
+            })
 
         // Initialization for the angular-auth0 library
         angularAuth0Provider.init({
             clientID: '126ZPKWHzyLsERekrEgZutBUP1ZWSDYh',
             domain: 'murad-hossain.au.auth0.com',
             responseType: 'token id_token',
-            redirectUri: 'http://localhost:3000/callback',
+            redirectUri: CallbackURL,
             scope:'openid',
             audience: 'https://murad-hossain.au.auth0.com/api/v2/',
         });
@@ -51,7 +68,7 @@
             tokenGetter: function () {
                 return localStorage.getItem('access_token');
             },
-            whiteListedDomains: ['localhost']
+            whiteListedDomains: ['localhost','muradruetyahoo-001-site1.ftempurl.com']
         });
 
         $httpProvider.interceptors.push('jwtInterceptor');

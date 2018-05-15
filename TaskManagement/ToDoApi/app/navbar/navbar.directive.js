@@ -8,9 +8,14 @@
             controllerAs: 'vm'
         }
     }
-    navbarController.$inject = ['authService'];
-    function navbarController(authService) {
+    navbarController.$inject = ['authService', '$state'];
+    function navbarController(authService, $state) {
         var vm = this;
         vm.auth = authService;
+
+        vm.AddUser = function () {
+            
+            $state.go('user');
+        }
     }
 })();

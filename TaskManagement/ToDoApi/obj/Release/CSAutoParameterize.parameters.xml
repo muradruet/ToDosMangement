@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DB_A3B63F_ToDoDB-Web.config Connection String" description="DB_A3B63F_ToDoDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=SQL5006.site4now.net;Initial Catalog=DB_A3B63F_ToDoDB;User Id=DB_A3B63F_ToDoDB_admin;Password=murad123;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\MuradAll\\MyCodeRepo\\ToDosMangement\\TaskManagement\\ToDoApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DB_A3B63F_ToDoDB']/@connectionString" />
+  </parameter>
+</parameters>

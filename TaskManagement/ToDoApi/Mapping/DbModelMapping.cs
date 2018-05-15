@@ -29,6 +29,7 @@ namespace WebApi.Mapping
                 taskDTO.Name = task.name;
                 taskDTO.Description = task.description;
                 taskDTO.Status = (StatusEnum)task.statusId;
+                taskDTO.StatusDescription = taskDTO.Status.GetDescription();
                 taskDTO.DueDate = task.duedate;
                 taskDTO.AssignedUsersId = task.users != null ? task.users.Select(x => x.userId).ToList() : null;
             }

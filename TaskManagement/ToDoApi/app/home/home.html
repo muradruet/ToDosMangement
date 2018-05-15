@@ -1,14 +1,52 @@
-﻿<div>
+﻿<div ng-if="vm.auth.isAuthenticated()">
+    
     <div class="panel panel-info">
         <div class="panel-heading">
-            <h3 class="panel-title">Tasks</h3>
+            <h3 class="panel-title pull-left">Tasks</h3>
+            <button ng-click="vm.addNewaTask()" class="btn btn-default pull-right">New Task</button>
+            <div class="clearfix"></div>
         </div>
         <div class="panel-body">
-            Panel content
-            <a ng-if="vm.auth.isAuthenticated()" ng-click="vm.getTasts()" class="btn btn-primary">Call API tasks</a>
+            <div ng-if="vm.loading" class="topheader text-center">
+                <img ng-src="app/Assets/loading_spinner.gif" alt="loading..." />
+            </div>
+            <div ng-if="!vm.loading">
+                <table class="table" ng-if="vm.tasks">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                            <th>Assigned To(s)</th>
 
-            <p ng-if="vm.taskMessage">{{vm.taskMessage}}</p>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="task in vm.tasks">
+                            <td>{{task.taskId}}</td>
+                            <td>{{task.name}}</td>
+                            <td>{{task.description}}</td>
+                            <td style="width:10%">{{vm.statusDescription(task.status)}}</td>
+                            <td>{{task.dueDate | date :  "dd/MM/yyyy"}}</td>
+                            <td>{{vm.userNames(task.assignedUsersId)}}</td>
+                            <td style="width:10%">
+                                <button ng-if="task.status != vm.CancleTask" class="btn btn-default" ng-click="vm.editTask(task, vm.tasks)">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </button>
+                                <button ng-if="task.status != vm.CancleTask" class="btn btn-default" ng-click="vm.deleteTask(task.taskId)">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                </button>
+                                <!--<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>-->
+                                <!--<a href="#"> <span class="glyphicon glyphicon-trash"></span></a>-->
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-
     </div>
 </div>

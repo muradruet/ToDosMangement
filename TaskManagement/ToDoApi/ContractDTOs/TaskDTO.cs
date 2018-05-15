@@ -11,6 +11,7 @@ namespace WebApi.ContractDTOs
         public string Name { get; set; }
         public string Description { get; set; }
         public StatusEnum? Status { get; set; }
+        public string StatusDescription { get; set; }
         public DateTime? DueDate { get; set; }
         public List<int> AssignedUsersId { get; set; }
     }

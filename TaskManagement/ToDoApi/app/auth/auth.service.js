@@ -4,9 +4,9 @@
 
     angular.module('app').service('authService', authService);
 
-    authService.$inject = ['$state', 'angularAuth0', '$timeout'];
+    authService.$inject = ['$state', 'angularAuth0', '$timeout', '$http'];
 
-    function authService($state, angularAuth0, $timeout) {
+    function authService($state, angularAuth0, $timeout, $http) {
         function login() {
             angularAuth0.authorize();
         }
@@ -46,11 +46,23 @@
             return new Date().getTime() < expiresAt;
         }
 
+        function allStatus() {
+            $http.get(baseUrl+'/api/status').then(
+                function (result) {
+                    return result.data;
+                },
+                function (error) {
+                    console.log(error);
+                }
+            );
+        }
+
         return {
             login: login,
             handleAuthentication: handleAuthentication,
             logout: logout,
-            isAuthenticated: isAuthenticated
+            isAuthenticated: isAuthenticated,
+            allStatus: allStatus
         }
     }
 })();
