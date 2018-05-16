@@ -1,0 +1,11 @@
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\WebApi.dll.config
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\WebApi.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\WebApi.pdb
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.SqlServer.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.xml
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework.SqlServer.xml
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\ToDoApi.csproj.CoreCompileInputs.cache
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\WebApi.dll
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\WebApi.pdb
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\ToDoApi.csprojResolveAssemblyReference.cache

@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using Owin;
+using Newtonsoft.Json.Serialization;
 
 namespace WebApi
 {
@@ -8,7 +9,8 @@ namespace WebApi
         public static void Configure(IAppBuilder app)
         {
             HttpConfiguration config = new HttpConfiguration();
-
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
             // Web API routes
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
