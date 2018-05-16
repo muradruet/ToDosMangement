@@ -8,3 +8,4 @@ C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\bin\EntityFramework
 C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\ToDoApi.csproj.CoreCompileInputs.cache
 C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\WebApi.dll
 C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\WebApi.pdb
+C:\MuradAll\MyCodeRepo\ToDosMangement\TaskManagement\ToDoApi\obj\Release\ToDoApi.csprojResolveAssemblyReference.cache

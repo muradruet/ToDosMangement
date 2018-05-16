@@ -36,21 +36,31 @@
         }
 
         vm.allUserCall();
-        vm.allStatus = $stateParams.myParam.Status;
-        if ($stateParams.myParam.task) {
+        if ($stateParams.myParam && $stateParams.myParam.task) {
             vm.task = $stateParams.myParam.task;
-           
+            vm.allStatus = $stateParams.myParam.Status;
             vm.selectedStatus = vm.allStatus.find(x => x.id === vm.task.status);
+            localStorage.setItem('cur_task', JSON.stringify($stateParams.myParam.task));
+            localStorage.setItem('cur_status_all', JSON.stringify($stateParams.myParam.Status));
         }
         else {
-            vm.task = {
-                taskId: null,
-                name: '',
-                description: '',
-                status: null,
-                dueDate: '',
-                assignedUsersId: []
-            };
+            var curtask = JSON.parse(localStorage.getItem('cur_task'));
+            var curallStatus = JSON.parse(localStorage.getItem('cur_status_all'));
+            if (curtask) {
+                vm.allStatus = curallStatus;
+                vm.task = curtask;
+                vm.selectedStatus = vm.allStatus.find(x => x.id === vm.task.status);
+            }
+            else {
+                vm.task = {
+                    taskId: null,
+                    name: '',
+                    description: '',
+                    status: null,
+                    dueDate: '',
+                    assignedUsersId: []
+                };
+            }
         }
         
 
